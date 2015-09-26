@@ -1,0 +1,8 @@
+name: ShinyApp
+account: lingas
+server: shinyapps.io
+bundleId: 274233
+url: https://lingas.shinyapps.io/ShinyApp
+when: 1443247265.41447
+asMultiple: FALSE
+asStatic: FALSE
