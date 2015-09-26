@@ -26,6 +26,7 @@ shinyUI(fluidPage(
   headerPanel("Activity Analysis"),
 
   # Sidebar with a slider input for number of bins
+  h3("The plot displays the mean number of steps taken each day. The slider on the left control the bin width of the histogram."),
   fluidRow(
         
         column(4,
@@ -37,17 +38,11 @@ shinyUI(fluidPage(
         ),
           
         column(8,
-               tabsetPanel(
-                       tabPanel("Plot",plotOutput("distPlot")),
-                       tabPanel("Guide",
-                        "
-                        
-                        The plot displays the mean number of steps taken each day. The slider on the left control the bin width of the histogram.
-                        Recaluation of the is done on change of the bin width"
-               )
+              
+                plotOutput("distPlot")
         )
   ),
-  
+  h3("The plot displays the average no of steps taken. The radio button on the left control the control the color of the graph."),
   fluidRow(
           
           column(4,
@@ -57,16 +52,8 @@ shinyUI(fluidPage(
           ),
           
           column(8,
-                 tabsetPanel(
-                         tabPanel("Plot",plotOutput("distPlot2")),
-                         tabPanel("Guide",
-                                  "
-                        This example Shiny App extends the project done for Course 5 - Reproducible Research.
-                        
-                        The plot displays the average no of steps taken. The radio button on the left control the control the color of the graph."
-                         )
-                 )
-          )
+                plotOutput("distPlot2"))
+
   )
-  )
+         
 ))
